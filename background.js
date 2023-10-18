@@ -38,3 +38,8 @@ chrome.action.onClicked.addListener(async (tab) => {
 });
 
 // TODO: Add body FIX for the tests - White is to much
+// how about adding more padding to the correct answer?
+// there is also missing top margin
+// posible bg color #ecefc8
+
+// additional feature - count word and color code it randomly --- or not! Maybe there is another way
