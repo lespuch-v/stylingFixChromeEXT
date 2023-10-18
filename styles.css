@@ -10,7 +10,7 @@ div.correct {
 }
 
 div.answer.correct {
-  font-size: 200%;
+  font-size: 1.2rem;
   font-weight: 900 !important;
 }
 div.answer.selected.incorrect div.correct::before,
@@ -48,4 +48,13 @@ div.correct::after {
   left: 0;
   background: inherit;
   border-radius: inherit;
+}
+
+/* QUESTION TEST */
+
+.test-container .question-content .question-text {
+  margin: 5px 0px 10px 0;
+  font-size: 1.6rem;
+  color: #070e3c;
+  font-weight: bold;
 }
