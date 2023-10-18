@@ -58,3 +58,23 @@ div.correct::after {
   color: #070e3c;
   font-weight: bold;
 }
+
+.test-container .question-content .answer-container .answer.correct {
+  margin-top: 15px;
+}
+
+.test-container {
+  background-color: #e3e7e9;
+}
+
+#sortRandomContainerID,
+div.sort-select-container {
+  background-color: #e3e7e9;
+}
+
+.test-container .left-menu .mark-question-container,
+.test-container .left-menu .basket-select-container,
+.test-container .left-menu .sort-select-container {
+  background-color: #e3e7e9 !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+}

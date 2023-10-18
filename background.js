@@ -1,15 +1,17 @@
+import { TestWebsites } from './src/modules/urlManager';
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.action.setBadgeText({
     text: 'OFF',
   });
 });
 
-const practiceTest = 'https://etesty2.mdcr.cz/Test/TestPractise/';
-const website = 'https://etesty2.mdcr.cz/Test/TestExam/';
+// const practiceTest = 'https://etesty2.mdcr.cz/Test/TestPractise/';
+// const website = 'https://etesty2.mdcr.cz/Test/TestExam/';
 
 chrome.action.onClicked.addListener(async (tab) => {
   // Checks if you're on one of those two websites (practiceTest or website).
-  if (tab.url.startsWith(website) || tab.url.startsWith(practiceTest)) {
+  if (tab.url.startsWith(TestWebsites)) {
     // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
     const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
 
@@ -36,10 +38,5 @@ chrome.action.onClicked.addListener(async (tab) => {
     }
   }
 });
-
-// TODO: Add body FIX for the tests - White is to much
-// how about adding more padding to the correct answer?
-// there is also missing top margin
-// posible bg color #ecefc8
 
 // additional feature - count word and color code it randomly --- or not! Maybe there is another way
