@@ -1,0 +1,51 @@
+div.correct {
+  background-color: #89d28c !important;
+  border: 2px solid green;
+  position: relative;
+  transform: translate(0);
+  transform-style: preserve-3d;
+  margin: 1rem 0 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+div.answer.correct {
+  font-size: 200%;
+  font-weight: 900 !important;
+}
+div.answer.selected.incorrect div.correct::before,
+div.correct::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #63a4ff 14%, #83eaf1 96%);
+  transform: translate3d(10px, 10px, 0) scale(1.07);
+  filter: blur(25px);
+  opacity: var(1);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+div.answer.selected.incorrect,
+div.answer.incorrect {
+  content: '❌';
+  background-color: #e78282 !important;
+  font-size: 15px;
+}
+
+div.answer.selected.incorrect div.correct::before,
+div.correct::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
