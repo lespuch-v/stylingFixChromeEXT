@@ -7,13 +7,15 @@
     "48": "images/icon-48.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "permissions": ["activeTab", "scripting"],
   "content_scripts": [
     {
-      "matches": ["https://etesty2.mdcr.cz/Test/TestExam/*", "https://etesty2.mdcr.cz/Test/TestPractise/*"],
-      "js": ["scripts/content.js"]
+      "matches": ["<all_urls>"],
+      "js": ["./content.js"],
+      "run_at": "document_start"
     }
   ],
   "action": {
